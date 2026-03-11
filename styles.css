@@ -119,18 +119,11 @@ body {
   animation: bounceSlow 2.5s ease-in-out infinite;
 }
 
-/* photo carousel infinite scroll */
-@keyframes photoScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.photo-carousel {
-  animation: photoScroll 25s linear infinite;
-}
-
-.photo-carousel:hover {
-  animation-play-state: paused;
+/* photo carousel */
+.photo-carousel-track {
+  will-change: transform;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* photo card */

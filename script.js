@@ -129,6 +129,49 @@ document.querySelectorAll('.reveal').forEach((el) => {
   revealObserver.observe(el);
 });
 
+// --- Photo carousel (infinite, cross-platform) ---
+(function () {
+  const track = document.getElementById('photoCarousel');
+  if (!track) return;
+
+  const items = Array.from(track.children);
+  const gap = window.innerWidth >= 640 ? 12 : 8;
+
+  items.forEach((item) => {
+    const clone = item.cloneNode(true);
+    track.appendChild(clone);
+  });
+
+  let offset = 0;
+  let paused = false;
+  const speed = 0.5;
+
+  function getResetPoint() {
+    let total = 0;
+    for (let i = 0; i < items.length; i++) {
+      total += items[i].offsetWidth + gap;
+    }
+    return total;
+  }
+
+  function animate() {
+    if (!paused) {
+      offset += speed;
+      const resetAt = getResetPoint();
+      if (offset >= resetAt) offset -= resetAt;
+      track.style.transform = 'translateX(' + (-offset) + 'px)';
+    }
+    requestAnimationFrame(animate);
+  }
+
+  track.addEventListener('mouseenter', () => { paused = true; });
+  track.addEventListener('mouseleave', () => { paused = false; });
+  track.addEventListener('touchstart', () => { paused = true; }, { passive: true });
+  track.addEventListener('touchend', () => { paused = false; }, { passive: true });
+
+  requestAnimationFrame(animate);
+})();
+
 // --- Initial state ---
 updateNav();
 updateActiveLink();
