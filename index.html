@@ -12,11 +12,11 @@
 <body class="bg-surface text-white font-inter">
 
 <!-- navigation -->
-<nav id="mainNav" class="fixed w-full z-50 transition-all duration-300">
+<nav id="mainNav" class="fixed w-full z-50 transition-all duration-300" style="background-color: rgba(17, 24, 39, 0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 h-[64px] sm:h-[72px] flex items-center justify-between">
     <a href="#" class="flex items-center gap-2 sm:gap-3 group">
-      <img src="logo.png" alt="Goodys" class="w-9 h-9 sm:w-11 sm:h-11 rounded-full transition-transform duration-300 group-hover:scale-110" />
-      <span class="font-bowlby text-xl sm:text-2xl text-brand-light tracking-wide">Goodys</span>
+      <img src="logo.png" alt="Goodys" class="w-11 h-11 sm:w-14 sm:h-14 rounded-full transition-transform duration-300 group-hover:scale-110" />
+      <span class="font-bowlby text-xl sm:text-2xl tracking-wide"><span class="text-brand-light">Goodys</span> <span class="text-gold">Smashburger</span></span>
     </a>
     <div id="desktopLinks" class="hidden md:flex items-center gap-1">
       <a href="#menu" class="nav-link relative px-4 py-2 text-[13px] font-medium text-zinc-400 hover:text-white rounded-full transition-all duration-200" data-section="menu">Menü</a>
@@ -52,7 +52,8 @@
   </div>
   <div class="relative z-10 flex-1 flex flex-col items-center justify-center px-4 sm:px-5 pt-16 sm:pt-20 text-center">
     <img src="logo.png" alt="Goodys" class="rounded-full mx-auto mb-4 sm:mb-6 w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] md:w-[140px] md:h-[140px] hero-logo" />
-    <h1 class="font-bowlby text-[2.5rem] sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] hero-title">SMASH<br>BURGER</h1>
+    <h1 class="font-bowlby text-[2.5rem] sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] hero-title">GOODYS</h1>
+    <p class="font-bowlby text-[2.5rem] sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] text-gold hero-title">SMASHBURGER</p>
     <p class="text-zinc-400 mt-3 sm:mt-5 text-sm sm:text-base md:text-lg tracking-wide hero-subtitle">Mühlegasse 5 · Zürich</p>
   </div>
   <div class="relative z-10 max-w-2xl mx-auto w-full pb-24 md:pb-16 px-4 sm:px-5 hero-buttons">
@@ -310,11 +311,11 @@
           <img src="Goodys-Schrift.png" alt="Goodys Neon" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="object-position: top;" />
         </div>
         <div class="flex-1 flex flex-col gap-2 sm:gap-3">
-          <div class="flex-1 rounded-xl sm:rounded-2xl overflow-hidden group">
-            <img src="interior-wall.png" alt="Interior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          <div class="flex-1 rounded-xl sm:rounded-2xl overflow-hidden group bg-surface-raised">
+            <img src="interior-wall.png" alt="Interior" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105" />
           </div>
-          <div class="flex-1 rounded-xl sm:rounded-2xl overflow-hidden group">
-            <img src="storefront.png" alt="Storefront" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          <div class="flex-1 rounded-xl sm:rounded-2xl overflow-hidden group bg-surface-raised">
+            <img src="storefront.png" alt="Storefront" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105" />
           </div>
         </div>
       </div>
@@ -362,10 +363,10 @@
         </blockquote>
         <blockquote class="reveal review-card border-t border-zinc-800 pt-4 sm:pt-5 transition-all duration-300 hover:border-gold/30">
           <div class="flex items-center gap-1 mb-2 sm:mb-3">
-            <span class="text-gold text-xs sm:text-sm">★★★★</span><span class="text-zinc-700 text-xs sm:text-sm">★</span>
+            <span class="text-gold text-xs sm:text-sm">★★★★★</span>
           </div>
-          <p class="text-zinc-300 text-sm sm:text-base leading-[1.7] sm:leading-[1.75] mb-2 sm:mb-3">"Super freundliches Team und mega schnelle Bedienung. Die Loaded Fries sind der Hammer. Einziger Nachteil: man will immer mehr."</p>
-          <cite class="not-italic text-[12px] sm:text-[13px] text-zinc-500 font-medium">— David R.</cite>
+          <p class="text-zinc-300 text-sm sm:text-base leading-[1.7] sm:leading-[1.75] mb-2 sm:mb-3">"Really good and well executed smash burger. Delivery was great, I live far and the packaging was well designed so the food didn't get cold, plus they included a business card to contact the restaurant directly if something wasn't right with the order — which I thought was an excellent touch."</p>
+          <cite class="not-italic text-[12px] sm:text-[13px] text-zinc-500 font-medium">— Yannick R. <span class="text-zinc-600">· Local Guide</span></cite>
         </blockquote>
         <blockquote class="reveal review-card border-t border-zinc-800 pt-4 sm:pt-5 transition-all duration-300 hover:border-gold/30">
           <div class="flex items-center gap-1 mb-2 sm:mb-3">
